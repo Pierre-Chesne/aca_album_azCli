@@ -27,20 +27,7 @@ const albums = [
     price: 39.99,
     image_url: "https://aka.ms/albums-envoylogo",
   },
-  {
-    id: 5,
-    title: "Lock Down your Love",
-    artist: "V is for VNET",
-    price: 39.99,
-    image_url: "https://aka.ms/albums-vnetlogo",
-  },
-  {
-    id: 6,
-    title: "Sweet Container O' Mine",
-    artist: "Guns N Probeses",
-    price: 39.99,
-    image_url: "https://aka.ms/albums-containerappslogo",
-  },
+  
 ];
 
 const getAlbums = async function () {
