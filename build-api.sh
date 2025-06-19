@@ -1,7 +1,7 @@
 #!/bin/bash
 API_NAME="album-api"
 ACR_NAME="acaalbumacr"
-API_VERSION="v.1.0.0"
+API_VERSION="v.1.2.0"
 
 
 
