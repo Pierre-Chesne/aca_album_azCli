@@ -30,7 +30,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}/code-to-cloud/src
-          _dockerfilePathKey_: _dockerfilePath_
+#          _dockerfilePathKey_: _dockerfilePath_
           registryUrl: acaalbumacr.azurecr.io
           registryUsername: ${{ secrets.ALBUMAPI_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.ALBUMAPI_REGISTRY_PASSWORD }}
