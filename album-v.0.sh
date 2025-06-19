@@ -1,17 +1,23 @@
 RESOURCE_GROUP="album-containerapps-rg"
 LOCATION="francecentral"
 ENVIRONMENT="env-album-containerapps"
-API_NAME="album-api"
-FRONTEND_NAME="album-ui"
-GITHUB_USERNAME="pierre-chesne"
-ACR_NAME="acaalbumacr"
-IDENTITY="aca-mi"
-
-
 APPLICATION_NAME="album"
 PREFFIX_VNET="10.0.0.0/16"
 PREFFIX_SUBNET_ENV="10.0.0.0/27"
 PREFFIX_SUBNET_BASTION="10.0.0.64/27"
+ACR_NAME="acaalbumacr"
+IDENTITY="aca-mi"
+
+
+API_NAME=album-api
+VERSION_API="v.1.0.0"
+
+
+FRONTEND_NAME=album-ui
+VERSION_FRONTEND="v.1.0.0"
+
+
+
 
 
 ####################################################################################################
@@ -79,12 +85,12 @@ az acr create \
   --sku Basic
 
 echo "building the API image in ACR: $ACR_NAME"
-cd /Users/peterochesne/repos/startup/aca_album_azCli/code-to-cloud/src 
-az acr build --registry $ACR_NAME --image $API_NAME .
+cd /Users/peterochesne/repos/startup/aca_album_azCli/code-to-cloud/src
+az acr build --registry $ACR_NAME --image $API_NAME:$VERSION_API .
 
 echo "building the frontend image in ACR: $ACR_NAME"
 cd /Users/peterochesne/repos/startup/aca_album_azCli/code-to-cloud-ui/src
-az acr build --registry $ACR_NAME --image $FRONTEND_NAME .
+az acr build --registry $ACR_NAME --image $FRONTEND_NAME:$VERSION_FRONTEND .
 
 #################################################################################################
 
@@ -111,7 +117,7 @@ az containerapp create \
   --name $API_NAME \
   --resource-group $RESOURCE_GROUP \
   --environment $ENVIRONMENT \
-  --image $ACR_NAME.azurecr.io/$API_NAME \
+  --image $ACR_NAME.azurecr.io/$API_NAME:$VERSION_API \
   --target-port 8080 \
   --ingress internal \
   --min-replicas 1 \
@@ -137,7 +143,7 @@ az containerapp create \
   --name $FRONTEND_NAME \
   --resource-group $RESOURCE_GROUP \
   --environment $ENVIRONMENT \
-  --image $ACR_NAME.azurecr.io/$FRONTEND_NAME \
+  --image $ACR_NAME.azurecr.io/$FRONTEND_NAME:$VERSION_FRONTEND \
   --target-port 3000 \
   --ingress external \
   --min-replicas 1 \
