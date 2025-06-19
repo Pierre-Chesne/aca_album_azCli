@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '**'
+    - 'code-to-cloud/**'
     - '.github/workflows/album-api-AutoDeployTrigger-437d8131-e2e7-4f8d-a747-a2b0f8d80ab4.yml'
 
   # Allow manual trigger 
