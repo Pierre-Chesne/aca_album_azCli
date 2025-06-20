@@ -13,7 +13,7 @@ az containerapp revision list \
 az containerapp ingress traffic set \
     --name $APPLICATION_NAME \
     --resource-group $RESOURCE_GROUP_NAME \
-    --revision-weight album-api--0000006=100 \
+    --revision-weight album-api--0000007=50 album-api--0000006=50\
 
 az containerapp revision list \
   --name $APPLICATION_NAME \

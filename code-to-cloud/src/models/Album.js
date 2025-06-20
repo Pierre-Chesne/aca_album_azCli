@@ -27,28 +27,6 @@ const albums = [
     price: 39.99,
     image_url: "https://aka.ms/albums-envoylogo",
   },
-  
-  {
-    id: 5,
-    title: "The Power of the Platform",
-    artist: "Azure",
-    price: 29.99,
-    image_url: "https://aka.ms/albums-azurelologo",
-  },
-  {
-    id: 6,
-    title: "The Future is Serverless",
-    artist: "Functions",
-    price: 49.99,
-    image_url: "https://aka.ms/albums-functionlogo",
-  },
-  {
-    id: 7,
-    title: "The Art of Scaling",
-    artist: "App Service",
-    price: 24.99,
-    image_url: "https://aka.ms/albums-appservicelogo",
-  },
 
   
 ];
