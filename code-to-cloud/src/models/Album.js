@@ -27,6 +27,20 @@ const albums = [
     price: 39.99,
     image_url: "https://aka.ms/albums-envoylogo",
   },
+  {
+    id: 5,
+    title: "The Container Chronicles",
+    artist: "Docker Duo",
+    price: 29.99,
+    image_url: "https://aka.ms/albums-dockerlogo",
+  },
+  {
+    id: 6,
+    title: "Cloudy with a Chance of Containers",
+    artist: "Azure Cloud Band",
+    price: 49.99,
+    image_url: "https://aka.ms/albums-azurelologo",
+  },
 
   
 ];
