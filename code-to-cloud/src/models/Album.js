@@ -28,7 +28,6 @@ const albums = [
     image_url: "https://aka.ms/albums-envoylogo",
   },
   
-  
 ];
 
 const getAlbums = async function () {
