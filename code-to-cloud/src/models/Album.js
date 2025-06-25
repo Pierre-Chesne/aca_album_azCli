@@ -29,7 +29,7 @@ const albums = [
   },
   {
     id: 5,
-    title: "The Power of the Platform",
+    title: "The power of cosmic guy",
     artist: "Azure",
     price: 29.99,
     image_url: "https://github.com/pierre-chesne.png",
