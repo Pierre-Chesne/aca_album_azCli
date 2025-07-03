@@ -27,13 +27,7 @@ const albums = [
     price: 39.99,
     image_url: "https://aka.ms/albums-envoylogo",
   },
-  {
-    id: 5,
-    title: "The power of cosmic guy",
-    artist: "Azure",
-    price: 29.99,
-    image_url: "https://github.com/pierre-chesne.png",
-  },
+
  
   
 ];
